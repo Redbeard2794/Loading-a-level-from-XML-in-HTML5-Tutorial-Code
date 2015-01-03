@@ -1,0 +1,27 @@
+<level1>
+	<Platform>
+		<x>80</x>
+		<y>315</y>
+	</Platform>
+	
+	<Platform>
+		<x>170</x>
+		<y>315</y>
+	</Platform>
+	
+	<Platform>
+		<x>290</x>
+		<y>270</y>
+	</Platform>
+	
+	<Platform>
+		<x>400</x>
+		<y>220</y>
+	</Platform>
+	
+	<Platform>
+		<x>550</x>
+		<y>315</y>
+	</Platform>
+	
+</level1>
