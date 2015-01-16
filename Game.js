@@ -58,6 +58,7 @@ function main()
 
 //loads from inline xml
 function loadLevel() {
+//our xml strings
 	txt = "<level1>";
 
 	txt = txt + "<Platform>"
@@ -90,12 +91,14 @@ function loadLevel() {
 	for (var i = 0; i < game.numPlatforms; i++) {
 	var x;
 	var y;
-
+	//create a DOMParser
 		if (window.DOMParser) {
 			parser = new DOMParser();
 			xmlDoc = parser.parseFromString(txt, "text/xml");
+			//set x/y as the currently selected x/y tags value
 			x = xmlDoc.getElementsByTagName("x")[i].childNodes[0].nodeValue;
 			y = xmlDoc.getElementsByTagName("y")[i].childNodes[0].nodeValue;
+			//create a new platform
 			game.platforms[game.platforms.length] = new Platform(x, y);
 		}
 		else // Internet Explorer
@@ -115,10 +118,10 @@ function loadLevelFromExternal()
 	for (var i = 0; i < game.numPlatforms; i++) {
 		var x;
 		var y;
-
+		//same as before
 		x = xmlDoc.getElementsByTagName("x")[i].childNodes[0].nodeValue;
 		y = xmlDoc.getElementsByTagName("y")[i].childNodes[0].nodeValue;
-
+		//create a platform
 		game.platforms[game.platforms.length] = new Platform(x, y);
 	}
 }
